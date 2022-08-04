@@ -1,23 +1,26 @@
-class contaCorrente {
+export class contaCorrente {
     agencia;
+    cliente;
+    saldo = 0;
 
-    // O # torna o atributo oculto para o resto do programa
-    #saldo = 0;
 
     sacar(valor) {
-        if (this.#saldo >= valor) {
-            this.#saldo -= valor
+        if (valor > this.saldo) {
+            console.log('Saldo insuficiente!')
 
-            return this.#saldo
-        } else console.log("Saldo insuficiente!");
+        }   else this.saldo -= valor;
     }
 
     depositar(valor) {
-        if (valor > 0) {
-            this.#saldo += valor
-
-            return this.#saldo
-        } else console.log("Valor de deposito invalido!");
-    
+        if (valor <= 0) {
+            console.log('Valor de deposito invalido!');
+        } else this.saldo += valor;
     }
-};
+
+    transferir(valorTransf, conta) {
+        this.sacar(valorTransf);
+        conta.depositar(valorTransf);
+
+    } 
+
+}
