@@ -5,10 +5,10 @@ import {contaCorrente} from "./ContaCorrente.js";
 const cliente1 = new cliente();
 cliente1.nome = 'Gustavo';
 cliente1.sobrenome = 'Pimenta';
-cliente1.cpf = 55136903813;
+cliente1.cpf = 11111111111;
 
 const contaCorrente_cliente1 = new contaCorrente();
-contaCorrente_cliente1.agencia = 1069
+contaCorrente_cliente1.agencia = 1759
 contaCorrente_cliente1.cliente = cliente1
 contaCorrente_cliente1.depositar(900)
 
@@ -17,7 +17,7 @@ contaCorrente_cliente1.depositar(900)
 //Criando o cliente 2
 const cliente2 = new cliente();
 cliente2.nome = 'Alice'
-cliente2.sobrenome = 'Galliard'
+cliente2.sobrenome = 'Pedrovski'
 cliente2.cpf = 12345678945
 
 const conta2 = new contaCorrente();
